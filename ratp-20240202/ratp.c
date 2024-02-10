@@ -1,10 +1,9 @@
-
-
+#include "age.h"
 static const float Price = 1.2;
 
-#define Q6
+// #define Q6
 
-#ifndef Q6
+// #ifndef Q6
 float computePrice(int age, int tourist)
 {
     if (age>12)
@@ -20,21 +19,21 @@ float computePrice(int age, int tourist)
         return Price/2;
     }
 }
-#endif
+// #endif
 
 
 
-#ifdef Q6
-#include "age.h"
+// #ifdef Q6
 
 
 
 
-float computePrice(int age, int tourist)
+float computePrice2(int age, int tourist)
 {
     int limitAge;
     int *plimit = &limitAge;
     recupAge(plimit);
+    
     if (age>limitAge)
     {
         if (tourist)
@@ -49,4 +48,4 @@ float computePrice(int age, int tourist)
     }
 }
 
-#endif
+// #endif

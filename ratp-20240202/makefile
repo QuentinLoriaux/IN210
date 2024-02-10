@@ -20,7 +20,8 @@ all: $(OBJS)
 
 	
 exec : all
-	testAll.exe
+	- ./testAll
+
 %.o: %.c
 	$(CXX) $(OPTION) -c  $< -o $@ $(INCS)
 	
@@ -36,4 +37,6 @@ mrproper: clean
 	rm -f  testAll
 	rm -f  result.*
 
-doAll : mrproper all exec
+doAll : mrproper exec
+	gcov -b -c ratp.c
+	gcovr --html-details result.html
