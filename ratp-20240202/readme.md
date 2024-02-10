@@ -30,6 +30,8 @@ Il y a donc 4 possibilités :
 
 On a besoin de 4 tests pour couvrir toutes les conditions, et toutes les branches.
 
+On peut aussi ajouter un test pour vérifier qu'une personne ayant pile la limite d'age est traitée comme plus jeune
+
 ## Q4 :
 
 Un test est soit réussi, soit échoué. Si plusieurs assertions sont évaluées dans un même test, on ne peut pas savoir laquelle est à l'origine du résultat du test. Il vaut donc mieux faire un test pour chaque cas : les résultats seront directement exploitables.

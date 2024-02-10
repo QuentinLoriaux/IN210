@@ -93,6 +93,14 @@ static void younger_tourist(void **state){
     assert_float_equal(expected ,prix, 0.001);
 }
 
+static void equal_tourist(void **state){
+    (void) state;
+    will_return(recupAge,12);
+    float expected = 1.2;
+    float prix = computePrice2(12,1);
+    assert_float_equal(expected ,prix, 0.001);
+}
+
 // #define QUESTIONS
 
 int main(void) {
@@ -108,7 +116,8 @@ int main(void) {
         cmocka_unit_test(older_not_tourist),
         cmocka_unit_test(older_tourist),
         cmocka_unit_test(younger_not_tourist),
-        cmocka_unit_test(younger_tourist)
+        cmocka_unit_test(younger_tourist),
+        cmocka_unit_test(equal_tourist)
         #endif 
     };
  //   cmocka_set_message_output(CM_OUTPUT_XML);
