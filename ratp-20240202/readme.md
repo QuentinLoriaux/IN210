@@ -30,7 +30,9 @@ Il y a donc 4 possibilités :
 
 On a besoin de 4 tests pour couvrir toutes les conditions, et toutes les branches.
 
-On peut aussi ajouter un test pour vérifier qu'une personne ayant pile la limite d'age est traitée comme plus jeune
+pour éutidier les effets de bort, on ajouter des test pour des jeunes de 12 ans. Se qui rajoute deux testes :
+- touriste 12 ans
+- pas touriste 12 ans
 
 ## Q4 :
 
