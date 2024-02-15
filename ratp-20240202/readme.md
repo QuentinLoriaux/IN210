@@ -16,7 +16,7 @@ Il vaut mieux utiliser utiliser un assert_float_equal avec un epsilon inférieur
 
 Cependant, l'objectif de ce deuxième test n'est pas précisé alors je ne sais pas exactement ce qui est attendu.
 
-## 3 :
+## Q3 :
 
 Il y a 2 conditions indépendantes : 
 - touriste ou non
