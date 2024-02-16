@@ -15,12 +15,12 @@
 static int setup(void **state) {
     (void) state;
     printf("setUp");
- return 0;
+    return 0;
 }
 static int teardown(void **state) {
     (void) state;
     printf("tearDown");
-     return 0;
+    return 0;
 }
 
 /* A test case that does nothing and succeeds. */
@@ -93,6 +93,22 @@ static void younger_tourist(void **state){
     assert_float_equal(expected ,prix, 0.001);
 }
 
+static void limit_younger_tourist(void **state){
+    (void) state;
+    will_return(recupAge,12);
+    float expected = 1.2;
+    float prix = computePrice2(12,1);
+    assert_float_equal(expected ,prix, 0.001);
+}
+
+static void limit_younger_not_tourist(void **state){
+    (void) state;
+    will_return(recupAge,12);
+    float expected = 0.6;
+    float prix = computePrice2(12,0);
+    assert_float_equal(expected ,prix, 0.001);
+}
+
 static void equal_tourist(void **state){
     (void) state;
     will_return(recupAge,12);
@@ -117,6 +133,8 @@ int main(void) {
         cmocka_unit_test(older_tourist),
         cmocka_unit_test(younger_not_tourist),
         cmocka_unit_test(younger_tourist),
+        cmocka_unit_test(limit_younger_not_tourist),
+        cmocka_unit_test(limit_younger_tourist),
         cmocka_unit_test(equal_tourist)
         #endif 
     };
