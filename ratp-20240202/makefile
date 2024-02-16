@@ -40,3 +40,4 @@ mrproper: clean
 doAll : mrproper exec
 	gcov -b -c ratp.c
 	gcovr --html-details result.html
+	@echo "toto"
